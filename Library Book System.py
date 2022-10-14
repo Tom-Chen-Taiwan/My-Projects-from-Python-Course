@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+# Making a dataframe for demonstration
 
 import pandas as pd
 
