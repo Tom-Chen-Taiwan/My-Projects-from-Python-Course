@@ -40,9 +40,7 @@ library = pd.DataFrame({"Number": number, "Title": title,
 library.to_csv("library.csv")
 
 
-# In[65]:
-
-
+# Library Book System
 import sys
 import pandas as pd
 from datetime import datetime, timedelta
@@ -281,38 +279,10 @@ class Library:
                 self.library.to_csv("library.csv")
                 print("You have successfully returned the book.")
                 return self.library
-            
-    # 把library模組化用import方式
-    def Service(self):
-        service_code = input("If you want to check current books, press 1 \nIf you want to search title keyword, books, press 2 \nIf you want to search genre keyword, books, press 3 \nIf you want to search book number, books, press 4 \nIf you want to add book, books, press 5\nIf you want to check book status, press 6 \nIf you want to borrow books, press 7 \nIf you want to return books, press 8 \nIf you want to delete books, press 9 \n")
-        if service_code == "1":
-            Library.ListBook()
-        elif service_code == "2":
-            lib.TitleKeywordSearch()
-        elif service_code == "3":
-            lib.GenreKeywordSearch()
-        elif service_code == "4":
-            lib.BookNumberSearch()
-        elif service_code == "5":
-            lib.AddBook()
-        elif service_code == "6":
-            lib.CheckStatus()           
-        elif service_code == "7":
-            lib.BorrowBook()            
-        elif service_code == "8":
-            lib.ReturnBook()           
-        elif service_code == "9":
-            lib.DeleteBook()   
               
-        
+              
+lib = Library()      
 lib.Login()
-lib.Service()
-
-
-
-# In[39]:
-
-
 lib.ListBook()
 lib.TitleKeywordSearch()
 lib.GenreKeywordSearch()
@@ -322,10 +292,3 @@ lib.CheckStatus()
 lib.BorrowBook()
 lib.ReturnBook()
 lib.DeleteBook()
-
-
-# In[ ]:
-
-
-
-
